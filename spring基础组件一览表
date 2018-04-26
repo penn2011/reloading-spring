@@ -1,0 +1,30 @@
+Beanfactory顶级系列:
+I:BeanFactory:最顶层的接口,定义最基础的获取当个bean等功能。key:获取单个bean
+I:ListableBeanFactory->BeanFactory:定义接口,获取一组bean的功能。key:获取一组bean
+I:AutowireCapableBeanFactory->BeanFactory:具有装配能力的BeanFactory。key:装配bean能力
+I:HierarchicalBeanFactory->BeanFactory:定义获取父容器的一类组件。key:获取父容器
+
+-----------------------------------------
+I:SingletonBeanRegistry:定义存取单例bean接口的功能。key:存取单例bean
+
+I:AliasRegistry:给bean添加别名功能。key:给bean添加别名
+
+-----------------------------------------
+I:ResourceLoader:获取一个Resource。key:获取单个Resource
+I:ResourcePatternResolver->ResourceLoader:获取一组Resource。key:获取单个Resource+获取一组Resource
+
+-----------------------------------------
+I:EnvironmentCapable:获取一个Environment。key获取一个Environment
+
+==============================================
+I:ConfigurableBeanFactory->
+HierarchicalBeanFactory+SingletonBeanRegistry
+:提供设置Factory各种组件接口: key：设置Factory各种组件接口+获取父容器+存取单例bean
+
+ConfigurableListableBeanFactory->
+ListableBeanFactory+AutowireCapableBeanFactory+ ConfigurableBeanFactory
+:预先加载初始化bean。
+key:预先加载初始化bean+获取一组bean+装配bean能力+设置Factory各种组件接口+获取父容器+存取单例bean
+
+
+

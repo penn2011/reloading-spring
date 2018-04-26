@@ -54,6 +54,10 @@ import org.springframework.core.io.support.ResourcePatternResolver;
  * @see org.springframework.beans.factory.BeanFactory
  * @see org.springframework.core.io.ResourceLoader
  */
+/*
+2018/4/26-penn注:
+   添加要求获取ApplicationContext的信息,并且要求返回AutowireCapableBeanFactory
+*/
 public interface ApplicationContext extends EnvironmentCapable, ListableBeanFactory, HierarchicalBeanFactory,
 		MessageSource, ApplicationEventPublisher, ResourcePatternResolver {
 

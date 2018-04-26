@@ -58,6 +58,10 @@ import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
  * @see org.springframework.beans.factory.config.ConfigurableListableBeanFactory
  * @see org.springframework.context.ApplicationContext#getAutowireCapableBeanFactory()
  */
+/*
+2018/4/26-penn注:
+   具有装配能力的BeanFactory接口
+*/
 public interface AutowireCapableBeanFactory extends BeanFactory {
 
 	/**

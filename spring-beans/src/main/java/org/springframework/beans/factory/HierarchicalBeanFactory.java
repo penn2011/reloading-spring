@@ -29,6 +29,10 @@ package org.springframework.beans.factory;
  * @since 07.07.2003
  * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#setParentBeanFactory
  */
+/*
+2018/4/26-penn注:
+   当BeanFactory有继承关系的时候,抽象出来的结构
+*/
 public interface HierarchicalBeanFactory extends BeanFactory {
 
 	/**
